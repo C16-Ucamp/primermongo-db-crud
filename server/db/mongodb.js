@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
+require('dotenv').config(); 
 
-const url = 'mongodb+srv://DaniPM:zTo6gSgeYWUmL5W3@cluster0.3pxgomf.mongodb.net/'
+const url = `mongodb+srv://${process.env.DB_PASSWORD}@cluster0.3pxgomf.mongodb.net/`
 
 mongoose.connect(url)
 .then(()=>{
